@@ -1,0 +1,4 @@
+DOM - document object model
+
+Virtual Dom
+ Виртуальный дом это обьект который яв
