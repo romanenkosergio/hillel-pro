@@ -1,0 +1,15 @@
+.header {
+    background: linear-gradient(90.13deg, #1100ff 0.84%, #5cc31b85 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    margin-top: 30px;
+    margin-bottom: 5px;   
+}
+
+.todo-input {
+    background: #d6d3ff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+}
