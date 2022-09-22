@@ -1,7 +1,10 @@
 import './Task.css'
-import { useState } from "react"
+import { useContext } from "react"
+import TaskContext from '../providers/TaskContext'
 
-const Task = ({tasks, setTasks, task}) => {
+const Task = ({task}) => {
+  const {tasks, setTasks} = useContext(TaskContext)
+
   const removeTask = () => {
     if (task.isChecked) {
       setTasks(tasks.filter(currentTask => currentTask.id !== task.id))

@@ -1,13 +1,15 @@
 import './App.css';
 import Todo from '../Todo/Todo'
-import { useState } from 'react';
-
+import TaskProvider from '../providers/TaskProvider';
 
 function App() {
   return (
-    <div className="App">
-      <Todo/>
+    <div className='App'>
+      <TaskProvider>
+        <Todo/>
+      </TaskProvider>
     </div>
+
   );
 }
 
