@@ -27,7 +27,3 @@ const Todo = () => {
 
 
 export default Todo
-
-//<MyContext.Todo value=({tasks, setTasks})>
-//{children}
-//</MyContext.Todo>

@@ -18,7 +18,7 @@ const Task = ({task}) => {
           if(task.id === currentTask.id) {
             currentTask.isChecked = !task.isChecked
           }
-          return task
+          return currentTask
         }))
       }}/> 
       <label style={task.isChecked ? {textDecoration: 'line-through'} : {}} htmlFor={task.id}>{task.title}</label>
