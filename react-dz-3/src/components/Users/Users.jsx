@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import User from "../User/User";
 
 
-const Users = (promps) => {
-
+const Users = () => {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async () => {
@@ -14,10 +13,9 @@ const Users = (promps) => {
   };
 
   useEffect(() => {
-
     fetchUsers();
   }, []);
-  console.log(users)
+
   const renderedUsers = users.map(user => <User user={user} key={user.id}/>)
   return (
 
