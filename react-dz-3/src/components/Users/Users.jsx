@@ -16,7 +16,7 @@ const Users = () => {
     fetchUsers();
   }, []);
 
-  const renderedUsers = users.map(user => <User user={user} key={user.id}/>)
+  const renderedUsers = users.map(user => <User user={user} key={user?.id}/>)
   return (
 
     <div className="users container">

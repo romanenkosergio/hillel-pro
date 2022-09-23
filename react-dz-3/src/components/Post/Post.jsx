@@ -2,17 +2,17 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import './Post.css'
 
-const Post = (props) => {
+const Post = ({ post }) => {
 
   return (
     <div className="post">
       <Card>
         <Card.Body>
           <Card.Title>
-            {props.post.title}
+            {post?.title}
           </Card.Title>
           <Card.Text>
-             {props.post.body}
+             {post?.body}
           </Card.Text>
         </Card.Body>
       </Card>

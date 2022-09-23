@@ -16,8 +16,8 @@ const Posts = () => {
     fetchUsers();
   }, []);
   const renderedPosts = posts
-    .filter((post) => post.userId === parseInt(userId))
-    .map((post) => <Post key={post.id} post={post}>{post.title}</Post>)
+    .filter(post => post?.userId === parseInt(userId))
+    .map(post => <Post key={post?.id} post={post}>{post?.title}</Post>)
 
   return <div className="row">{renderedPosts}</div>;
 };

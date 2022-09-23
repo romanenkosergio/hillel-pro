@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import './User.css'
 
-const User = (props) => {
+const User = ({ user }) => {
   useEffect(() => {}, []);
 
   return (
@@ -12,12 +12,12 @@ const User = (props) => {
       <Card style={{width: '18rem'}}>
         <Card.Body>
           <Card.Title>
-            {props.user.name}
+            {user?.name}
           </Card.Title>
           <Card.Text>
-             {props.user.email}
+             {user?.email}
           </Card.Text>
-          <Link to={`/posts/${props.user.id}`}>
+          <Link to={`/posts/${user?.id}`}>
             <Button variant="primary">View post</Button>
             </Link>
         </Card.Body>
