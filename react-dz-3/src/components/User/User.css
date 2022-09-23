@@ -1,0 +1,12 @@
+.user {
+  margin: 5px;
+  display: inline-flex;
+}
+
+.card-body {
+    background: #f8f0ff;
+    box-shadow: -2px -3px 47px -1px rgba(176,176,176,0.93);
+}
+.btn {
+    box-shadow: -2px -3px 47px -1px rgba(176,176,176,0.93);
+}

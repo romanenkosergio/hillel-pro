@@ -1,0 +1,6 @@
+.post {
+  margin: 5px;
+  width: 300px;
+  height: 320px;
+  display: inline-flex;
+}
