@@ -1,16 +1,16 @@
-import './App.css';
+import './App.css'
 import Todo from '../Todo/Todo'
-import TaskProvider from '../providers/TaskProvider';
+import {Provider} from 'react-redux'
+import store from '../../store'
 
 function App() {
   return (
-    <div className='App'>
-      <TaskProvider>
+    <Provider store={store}>
+      <div className="App">
         <Todo/>
-      </TaskProvider>
-    </div>
-
-  );
+      </div>
+    </Provider>
+  )
 }
 
-export default App;
+export default App
