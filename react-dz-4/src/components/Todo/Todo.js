@@ -1,13 +1,19 @@
 import './Todo.css'
 import Task from '../Task/Task'
 import {useDispatch, useSelector} from 'react-redux'
-import {useState} from 'react'
-import {addTask, selectTasks} from '../../store/slices/tasks'
+import {useEffect, useState} from 'react'
+import {addTask, selectTasks, loadTasks} from '../../store/slices/tasks'
 
 
 const Todo = () => {
   const tasks = useSelector(selectTasks)
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+      .then(r => r.json())
+      .then(data => dispatch(loadTasks(data)))
+  }, [])
 
   const [input, setInput] = useState('')
 
