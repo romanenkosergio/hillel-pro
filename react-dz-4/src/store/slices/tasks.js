@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit"
 import {v4 as uuidv4} from "uuid"
-import axios from 'axios'
+import {tasksApi} from '../api/tasksApi'
 
 const initialState = {
   tasks: [],
@@ -26,14 +26,19 @@ export const tasksSlice = createSlice({
         return currentTask
       })
     },
-    loadTasks: (state, {payload}) => {
-      state.tasks = payload
-    }
+  },
+  extraReducers: (builder) => {
+    builder.addMatcher(
+      tasksApi.endpoints.getTasks.matchFulfilled,
+      (state, {payload}) => {
+        state.tasks = payload
+      },
+    )
   },
 })
 
-export const {removeTask, addTask, selectTask, loadTasks} = tasksSlice.actions
+export const {removeTask, addTask, selectTask} = tasksSlice.actions
 
-export const selectTasks = (state) => state.tasks.tasks;
+export const selectTasks = (state) => state.tasks.tasks
 
 export default tasksSlice.reducer
