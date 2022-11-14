@@ -1,0 +1,20 @@
+.img-products {
+  height: 180px;
+    width: 272px;
+}
+
+.rating-stars {
+    color: #f3ca04;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.price-product {
+    margin-top: 10px;
+}
